@@ -8,7 +8,7 @@ The [floor function](https://en.wikipedia.org/wiki/Floor_and_ceiling_functions) 
 
 <div class="equation" align="center" data-raw-text="
     \operatorname{floor}(x) =\lfloor x \rfloor=\max\, \{m\in\mathbb{Z}\mid m\le x\}" data-equation="eq:floor_function">
-	<img src="" alt="Equation of the floor function.">
+	<img src="https://cdn.rawgit.com/compute-io/floor/ba93990f41608f7283edc66a661eec2809c20be8/docs/img/eqn.svg" alt="Equation of the floor function.">
 	<br>
 </div>
 
