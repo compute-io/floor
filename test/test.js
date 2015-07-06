@@ -12,6 +12,9 @@ var // Expectation library:
 	// Validate a value is NaN:
 	isnan = require( 'validate.io-nan' ),
 
+	// Cast typed arrays to a different data type
+	cast = require( 'compute-cast-arrays' ),
+
 	// Module to be tested:
 	floor = require( './../lib' ),
 
@@ -192,7 +195,7 @@ describe( 'compute-floor', function tests() {
 			4.2,
 			5.1
 		]);
-		expected = new Float64Array([
+		expected = new Int32Array([
 			-10,
 			-5,
 			-3,
@@ -371,7 +374,7 @@ describe( 'compute-floor', function tests() {
 			i;
 
 		d1 = new Float64Array( 25 );
-		d2 = new Float64Array( 25 );
+		d2 = new Int32Array( 25 );
 		for ( i = 0; i < d1.length; i++ ) {
 			d1[ i ] = i / 5;
 			d2[ i ] = FLOOR( i / 5 );
@@ -386,7 +389,7 @@ describe( 'compute-floor', function tests() {
 			'copy': false
 		});
 		assert.strictEqual( mat, out );
-		assert.deepEqual( mat.data, d2 );
+		assert.deepEqual( mat.data, cast( d2, 'float64') );
 	});
 
 	it( 'should evaluate the floor function element-wise and return a matrix of a specific type', function test() {
@@ -413,8 +416,8 @@ describe( 'compute-floor', function tests() {
 
 	it( 'should return an empty data structure if provided an empty data structure', function test() {
 		assert.deepEqual( floor( [] ), [] );
-		assert.deepEqual( floor( matrix( [0,0] ) ).data, new Float64Array() );
-		assert.deepEqual( floor( new Int8Array() ), new Float64Array() );
+		assert.deepEqual( floor( matrix( [0,0] ) ).data, new Int32Array() );
+		assert.deepEqual( floor( new Int8Array() ), new Int32Array() );
 	});
 
 });
