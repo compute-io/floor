@@ -1,6 +1,6 @@
 {
   "name": "compute-floor",
-  "version": "2.0.1",
+  "version": "0.0.0",
   "description": "Computes the largest integer less than or equal to a numeric value (element-wise).",
   "author": {
     "name": "Philipp Burckhardt",
