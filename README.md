@@ -47,7 +47,7 @@ out = floor( -1.4 );
 // returns -2
 
 out = floor( [ -10.3, -1.2, 0, 1, 10.9 ] );
-// returns [ -11, -2, 0, 1, 11 ]
+// returns [ -11, -2, 0, 1, 10 ]
 
 data = [ 0.3, 1.9, 2.3 ];
 out = floor( data );
@@ -79,7 +79,7 @@ out = floor( mat );
 The function accepts the following `options`:
 
 * 	__accessor__: accessor `function` for accessing `array` values.
-* 	__dtype__: output [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) or [`matrix`](https://github.com/dstructs/matrix) data type. Default: `float64`.
+* 	__dtype__: output [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) or [`matrix`](https://github.com/dstructs/matrix) data type. Default: `int32`.
 *	__copy__: `boolean` indicating if the `function` should return a new data structure. Default: `true`.
 *	__path__: [deepget](https://github.com/kgryte/utils-deep-get)/[deepset](https://github.com/kgryte/utils-deep-set) key path.
 *	__sep__: [deepget](https://github.com/kgryte/utils-deep-get)/[deepset](https://github.com/kgryte/utils-deep-set) key path separator. Default: `'.'`.

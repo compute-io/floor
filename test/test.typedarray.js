@@ -25,7 +25,7 @@ describe( 'typed-array floor', function tests() {
 	});
 
 	it( 'should evaluate the floor function', function test() {
-		var data, actual, expected, i;
+		var data, actual, expected;
 
 		data = new Float64Array([
 			-9.4,
@@ -56,9 +56,7 @@ describe( 'typed-array floor', function tests() {
 			5
 		]);
 
-		for ( i = 0; i < actual.length; i++ ) {
-			assert.closeTo( actual[ i ], expected[ i ], 1e-7 );
-		}
+		assert.deepEqual( actual, expected );
 	});
 
 	it( 'should return an empty array if provided an empty array', function test() {
